@@ -1,0 +1,150 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #f8f9fa, #e8f0fe);
+  color: #333;
+}
+
+header {
+  background-color: #0E2C40;
+  color: white;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.autor {
+  margin-top: 0.1rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+main {
+  padding: 14rem 1rem 3rem;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 1rem 1.5rem;
+}
+
+.tarjeta {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.5s;
+  border: 4px solid transparent;
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.tarjeta:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-image: linear-gradient(45deg, #EFBC75, #C1E1A7, #148D8D, #1A4A5A, #0E2C40) 1;
+  border-image-slice: 1;
+  animation: rainbowBorder 2s linear infinite;
+}
+
+@keyframes rainbowBorder {
+  0% {
+    border-image: linear-gradient(45deg, #EFBC75, #C1E1A7, #148D8D, #1A4A5A, #0E2C40) 1;
+  }
+  50% {
+    border-image: linear-gradient(45deg, #0E2C40, #EFBC75, #C1E1A7, #148D8D, #1A4A5A) 1;
+  }
+  100% {
+    border-image: linear-gradient(45deg, #EFBC75, #C1E1A7, #148D8D, #1A4A5A, #0E2C40) 1;
+  }
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f7f7f7;
+}
+
+.tarjeta h2 {
+  margin: 0.1rem 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.tarjeta p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.contacto {
+  background-color: #C1E1A7;
+  color: #0E2C40;
+  text-align: center;
+  padding: 2rem 2rem;
+  margin-top: 1rem;
+  border-top: 1px ;
+  clip-path: polygon(
+    0% 0%, 100% 0%, 100% 85%,
+    90% 89%, 80% 86%, 70% 92%,
+    60% 87%, 50% 93%, 40% 88%,
+    30% 94%, 20% 88%, 10% 91%,
+    0% 87%
+  );
+  animation: melt 3s ease-in-out infinite alternate;
+}
+
+@keyframes melt {
+  0% {
+    clip-path: polygon(
+      0% 0%, 100% 0%, 100% 85%,
+      90% 89%, 80% 86%, 70% 92%,
+      60% 87%, 50% 93%, 40% 88%,
+      30% 94%, 20% 88%, 10% 91%,
+      0% 87%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      0% 0%, 100% 0%, 100% 85%,
+      90% 91%, 80% 89%, 70% 95%,
+      60% 89%, 50% 95%, 40% 91%,
+      30% 97%, 20% 91%, 10% 94%,
+      0% 90%
+    );
+  }
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  padding-top: 0.7;
+  flex-wrap: wrap;
+}
+
+.redes img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.1s ease;
+}
+
+.redes img:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  background-color: #0E2C40;
+  color: white;
+  text-align: center;
+  padding: 1rem;/
+}
